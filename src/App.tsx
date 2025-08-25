@@ -1,19 +1,18 @@
-import logo from '/budgetzilla.svg'
+import { Routes, Route } from 'react-router-dom'
+import Landing from './pages/Landing'
+import Login from './pages/Login'
+import Register from './pages/Register'
+import Home from './pages/Home'
 import './App.css'
 
 function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={logo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Budgetzilla</h1>
-      <p className="read-the-docs">
-          Track. Save. Dominate.
-      </p>
-    </>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   )
 }
 
