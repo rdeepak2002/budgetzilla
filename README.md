@@ -65,9 +65,6 @@ npm run preview
 
 ---
 
-
----
-
 ## 🤝 Contributing
 
 This is a personal project, but ideas and feedback are welcome!  
