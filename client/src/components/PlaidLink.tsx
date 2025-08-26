@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { PlaidLinkOnSuccess } from 'plaid';
 
 interface PlaidLinkProps {
   onSuccess: (publicToken: string, metadata: any) => void;
