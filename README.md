@@ -21,9 +21,13 @@ It helps you keep your expenses in check, monitor budgets, and visualize your fi
 
 ## 🛠️ Tech Stack
 
+**Frontend:**
 - [Vite](https://vitejs.dev/)
 - [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)  
 - [Tailwind CSS](https://tailwindcss.com/)
+
+**Backend:**
+- [Go](https://golang.org/) - Static file server
 - [Plaid API](https://plaid.com/)
 - [Postgres](https://www.postgresql.org/)
 
@@ -31,31 +35,65 @@ It helps you keep your expenses in check, monitor budgets, and visualize your fi
 
 ## 📦 Getting Started
 
+This is a monorepo with a Go server and React client.
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v18+)
+- [pnpm](https://pnpm.io/)
+- [Go](https://golang.org/) (v1.21+)
+
+### Setup
+
 Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/rdeepak2002/budgetzilla.git
 cd budgetzilla
-npm install
+pnpm install-deps
 ```
 
-Run the development server:
+### Development
+
+Run the React client in development mode:
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
-Build for production:
+This starts the Vite dev server at `http://localhost:5173`
+
+### Production Build
+
+Build both client and server:
 
 ```bash
-npm run build
+pnpm build
 ```
 
-Preview the production build:
+This will:
+1. Build the React app
+2. Copy built files to `server/public/`
+3. You can then run the Go server
+
+### Running Production Server
+
+After building, start the Go server:
 
 ```bash
-npm run preview
+pnpm start
 ```
+
+The server will serve the React app at `http://localhost:8080`
+
+### Available Scripts
+
+- `pnpm dev` - Run client development server
+- `pnpm build` - Build client and copy to server
+- `pnpm build:client` - Build client only
+- `pnpm build:server` - Build Go server binary
+- `pnpm start` - Run production server
+- `pnpm lint` - Lint client code
 
 ---
 

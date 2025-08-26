@@ -1,0 +1,1 @@
+web: cd server && ./budgetzilla-server

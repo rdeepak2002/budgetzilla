@@ -4,7 +4,13 @@
       "Bash(pnpm install:*)",
       "Bash(npx tailwindcss init:*)",
       "Bash(pnpm dlx:*)",
-      "Bash(pnpm run:*)"
+      "Bash(pnpm run:*)",
+      "Bash(mkdir:*)",
+      "Bash(pnpm build:*)",
+      "Bash(go mod:*)",
+      "Bash(go build:*)",
+      "Bash(/bin/ls -la server/)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

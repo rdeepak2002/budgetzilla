@@ -12,6 +12,22 @@ dist
 dist-ssr
 *.local
 
+# Go binaries and build artifacts
+server/budgetzilla-server
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test binary, built with `go test -c`
+*.test
+
+# Go build output
+server/go.sum
+server/public/*
+!server/public/.gitkeep
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
